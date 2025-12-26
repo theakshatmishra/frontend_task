@@ -28,7 +28,7 @@ npm install
 npm run dev
 
 ## Live Application
-https://frontend-task-nine-sable.vercel.app/
+https://frontend-task-nine-sable.vercel.app
 
 ## Repository
 https://github.com/theakshatmishra/frontend_task
