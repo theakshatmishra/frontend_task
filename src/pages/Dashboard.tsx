@@ -21,6 +21,7 @@ import {
 } from "@/components/ui/alert-dialog";
 
 export default function Dashboard() {
+  console.log("DASHBOARD_RENDERED");
   const { tasks, isLoading, createTask, updateTask, deleteTask } = useTasks();
   const [taskDialogOpen, setTaskDialogOpen] = useState(false);
   const [profileDialogOpen, setProfileDialogOpen] = useState(false);
@@ -54,8 +55,10 @@ export default function Dashboard() {
 
   const handleTaskSubmit = (data: TaskFormData) => {
     if (editingTask) {
+      console.log("TASK_UPDATE_REQUEST",editingTask.id);
       updateTask.mutate({ id: editingTask.id, ...data });
     } else {
+      console.log("TASK_CREATE_REQUEST", data.title);
       createTask.mutate({
         title: data.title,
         description: data.description || null,
@@ -68,6 +71,7 @@ export default function Dashboard() {
 
   const handleDeleteConfirm = () => {
     if (deleteTaskId) {
+      console.log("TASK_DELETE_REQUEST",deleteTaskId);
       deleteTask.mutate(deleteTaskId);
       setDeleteTaskId(null);
     }
