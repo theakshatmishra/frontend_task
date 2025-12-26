@@ -28,7 +28,7 @@ npm install
 npm run dev
 
 ## Live Application
-https://frontend-task-git-main-akshats-projects-0ff6dbcc.vercel.app/auth
+https://frontend-task-86na0zzj9-akshats-projects-0ff6dbcc.vercel.app/auth
 
 ## Repository
 https://github.com/theakshatmishra/frontend_task
